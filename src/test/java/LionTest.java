@@ -17,6 +17,11 @@ public class LionTest {
     @Mock
     Feline feline;
 
+    @Test(expected = Exception.class)
+    public void testConstructorWithException() throws Exception {
+        Lion lion = new Lion("Самец22",feline);
+    }
+
     @Test
     public void getKittensReturnCorrectValueTest() throws Exception {
         //AAA
